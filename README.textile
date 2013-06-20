@@ -1,6 +1,6 @@
 h1. Apotomo Mongo
 
-This application is a Apotomo demo application to build a facebook-like brand page.
+This application is a Apotomo demo application to build a facebook brand-page-like community.
 
 h2. Ruby on Rails
 
