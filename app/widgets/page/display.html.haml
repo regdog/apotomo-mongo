@@ -1,0 +1,4 @@
+= widget_div do
+  %h3 #{@page.name}
+  = render_widget :add_widgets, :display, :page => @page
+  = render_widget :widget_list, :display, :page => @page

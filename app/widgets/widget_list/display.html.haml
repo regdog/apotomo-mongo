@@ -1,0 +1,4 @@
+= widget_div do
+  %h2
+    All Widgets(#{@widgets.count})
+  = render({:state => :list}, @widgets)  

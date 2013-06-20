@@ -1,0 +1,3 @@
+%ul
+  - for widget in widgets
+    = render_widget "#{widget.class.to_s.camelize(:lower)}-#{widget.id}", :display, :widget => widget

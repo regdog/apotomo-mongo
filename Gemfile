@@ -5,6 +5,8 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
+gem "heroku"
+gem "apotomo", "~> 1.2.3"
 gem 'jquery-rails'
 gem "mongoid", ">= 3.1.2"
 gem "haml-rails", ">= 0.4"
