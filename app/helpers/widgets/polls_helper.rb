@@ -1,0 +1,2 @@
+module Widgets::PollsHelper
+end

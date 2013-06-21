@@ -4,7 +4,7 @@ class WidgetListWidget < Apotomo::Widget
     
   has_widgets do
     Page.find(params[:id]).widgets.each do |w|
-      self << widget("widget_list/#{w.class.to_s.camelize(:lower)}", "#{w.class.to_s.camelize(:lower)}-#{w.id}", :widget => w)
+      self << widget("widget_list/#{w.class.to_s.underscore}", "#{w.class.to_s.underscore}-#{w.id}", :widget => w)
     end
   end
 
@@ -16,7 +16,7 @@ class WidgetListWidget < Apotomo::Widget
 
   def process_add(evt)
     w = evt[:widget]
-    self << widget("widget_list/#{w.class.to_s.camelize(:lower)}", "#{w.class.to_s.camelize(:lower)}-#{w.id}", :widget => w)
+    self << widget("widget_list/#{w.class.to_s.underscore}", "#{w.class.to_s.underscore}-#{w.id}", :widget => w)
 
     replace "##{widget_id} ul", {:state => :list}, w.page.widgets 
   end  

@@ -7,6 +7,7 @@ group :assets do
 end
 gem "heroku"
 gem "apotomo", "~> 1.2.3"
+gem "nested_form"
 gem 'jquery-rails'
 gem "mongoid", ">= 3.1.2"
 gem "haml-rails", ">= 0.4"
