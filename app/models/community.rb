@@ -15,5 +15,6 @@ class Community
   has_many :widgets
   has_many :topics
   has_many :posts
+  has_many :questions
 
 end

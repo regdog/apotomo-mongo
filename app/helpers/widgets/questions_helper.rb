@@ -1,0 +1,2 @@
+module Widgets::QuestionsHelper
+end
