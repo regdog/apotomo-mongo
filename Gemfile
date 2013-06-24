@@ -9,6 +9,7 @@ gem "heroku"
 gem "apotomo", "~> 1.2.3"
 gem "nested_form"
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem "mongoid", ">= 3.1.2"
 gem "haml-rails", ">= 0.4"
 gem "html2haml", ">= 1.0.1", :group => :development

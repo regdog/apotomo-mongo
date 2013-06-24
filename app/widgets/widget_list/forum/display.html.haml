@@ -1,8 +1,10 @@
-%li{:id => dom_id(@forum)}
-  = @forum.name
-  = link_to 'delete', url_for_event(:delete_widget, :id => @forum.page.id, :widget_id => @forum.id), :confirm => 'Are you sure?', :method => 'delete', :remote => true
-  = link_to '发言', new_community_forum_topic_path(@forum.community, @forum)
-  %a{:href => "#", :id => "#{@forum.id}-settings"} settings
+/ %li{:id => dom_id(@forum)}
+%li{:id => "widget_#{@forum.id}"}
+  .handle
+    = @forum.name
+    = link_to 'delete', url_for_event(:delete_widget, :id => @forum.page.id, :widget_id => @forum.id), :confirm => 'Are you sure?', :method => 'delete', :remote => true
+    = link_to '发言', new_community_forum_topic_path(@forum.community, @forum)
+    %a{:href => "#", :id => "#{@forum.id}-settings"} settings
 
   .widget-settings{"data-id" => "#{@forum.id}", :style => "width:500px; background:#f4f4ec; padding:20px; margin-bottom:10px;"}
     = form_for @forum, :url => community_forum_url(@forum.community, @forum)  do |f|

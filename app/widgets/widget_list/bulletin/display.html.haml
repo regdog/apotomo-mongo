@@ -1,8 +1,10 @@
-%li{:id => dom_id(@bulletin)}
-  = @bulletin.name
-  = link_to 'delete', url_for_event(:delete_widget, :id => @bulletin.page.id, :widget_id => @bulletin.id), :confirm => 'Are you sure?', :method => 'delete', :remote => true
-  = link_to 'edit', edit_community_bulletin_path(@bulletin.community, @bulletin)
-  %a{:href => "#", :id => "#{@bulletin.id}-settings"} settings
+/ %li{:id => dom_id(@bulletin)}
+%li{:id => "widget_#{@bulletin.id}"}
+  .handle
+    = @bulletin.name
+    = link_to 'delete', url_for_event(:delete_widget, :id => @bulletin.page.id, :widget_id => @bulletin.id), :confirm => 'Are you sure?', :method => 'delete', :remote => true
+    = link_to 'edit', edit_community_bulletin_path(@bulletin.community, @bulletin)
+    %a{:href => "#", :id => "#{@bulletin.id}-settings"} settings
 
   .widget-settings{"data-id" => "#{@bulletin.id}", :style => "width:500px; background:#f4f4ec; padding:20px; margin-bottom:10px;"}
     = form_for @bulletin, :url => community_bulletin_url(@bulletin.community, @bulletin)  do |f|

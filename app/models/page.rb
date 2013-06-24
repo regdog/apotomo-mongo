@@ -9,7 +9,7 @@ class Page
 
   validates_presence_of :name
 
-  has_many :widgets
+  has_many :widgets, :order => "position asc"
   belongs_to :community
 
   def default_values
