@@ -1,4 +1,4 @@
-class WidgetList::QaWidget < Apotomo::Widget
+class WidgetList::QaWidget < AuthorizableWidget
   responds_to_event :delete_widget, :with => :destroy
 
   def display

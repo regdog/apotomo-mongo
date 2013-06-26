@@ -5,6 +5,7 @@ class Community
   field :name, type: String
   field :brief, type: String
   field :last_updated_at, type: Time
+  embeds_one :admin
 
   validates_presence_of :name
   validates_uniqueness_of :name

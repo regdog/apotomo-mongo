@@ -1,4 +1,4 @@
-class WidgetList::BulletinWidget < Apotomo::Widget
+class WidgetList::BulletinWidget < AuthorizableWidget
   responds_to_event :delete_widget, :with => :destroy
 
   def display(options)

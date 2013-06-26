@@ -1,4 +1,4 @@
-class WidgetList::PollSetWidget < Apotomo::Widget
+class WidgetList::PollSetWidget < AuthorizableWidget
   responds_to_event :delete_widget, :with => :destroy	
 
   def display

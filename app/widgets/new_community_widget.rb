@@ -1,4 +1,4 @@
-class NewCommunityWidget < Apotomo::Widget
+class NewCommunityWidget < AuthorizableWidget
   responds_to_event :submit		
 
   def display
@@ -6,7 +6,10 @@ class NewCommunityWidget < Apotomo::Widget
   end
 
   def submit(evt)
-  	community = Community.create(evt[:community])
+  	# community = Community.create(evt[:community])
+  	community = Community.new(evt[:community])
+  	community.admin = current_user
+  	community.save!
   	trigger :newCommunity, :task => community
   	replace :view => :display
   end

@@ -1,4 +1,4 @@
-class WidgetList::ForumWidget < Apotomo::Widget
+class WidgetList::ForumWidget < AuthorizableWidget
   responds_to_event :delete_widget, :with => :destroy	
 
   def display(options)

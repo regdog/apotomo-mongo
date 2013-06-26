@@ -1,4 +1,4 @@
-class PageListWidget < Apotomo::Widget
+class PageListWidget < AuthorizableWidget
   responds_to_event :updateName, :with => :update, :passing => :root	
 
   def display(options)

@@ -3,9 +3,11 @@
     - @pages.each do |p|
       %li{'data-id' => p.id}
         #{link_to p.name, [@community, p]}
-        %a.setting{:href => "#"} edit
-    %li 
-      #{link_to '设置', admin_community_path(@community)}
+        - if can? :update, @community 
+          %a.setting{:href => "#"} edit
+    - if can? :update, @community
+      %li 
+        #{link_to '设置', admin_community_path(@community)}
 
   :javascript
     $(document).ready(function(){

@@ -1,4 +1,6 @@
 class CommunitiesController < ApplicationController
+  # load_and_authorize_resource
+  
   has_widgets do |root|    
     root << widget(:new_community)
     root << widget(:community_list) 
