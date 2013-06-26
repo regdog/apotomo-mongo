@@ -22,7 +22,7 @@ h2. Development
 * Front-end Framework: None
 * Form Builder: None
 * Authentication: Devise
-* Authorization: None
+* Authorization: CanCan
 
 
 h2. Contributing
