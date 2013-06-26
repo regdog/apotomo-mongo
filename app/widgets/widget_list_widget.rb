@@ -1,4 +1,4 @@
-class WidgetListWidget < Apotomo::Widget
+class WidgetListWidget < AuthorizableWidget
   responds_to_event :widgetAdded, :with => :process_add, :passing => :page	
   responds_to_event :widgetDeleted, :with => :process_delete, :passing => :page
   responds_to_event :sort, :with => :process_sort
