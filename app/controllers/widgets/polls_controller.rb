@@ -3,18 +3,19 @@ class Widgets::PollsController < ApplicationController
     @polls = PollSet.find(params[:poll_set_id]).polls 
   end
 
-  def new
-    @poll = Poll.new
+  def new    
     @poll_set = PollSet.find(params[:poll_set_id])
+    @poll = Poll.new
     4.times do 
       @poll.options.build
     end
   end
 
   def create
+    @poll_set = PollSet.find(params[:poll_set_id])
     @poll = Poll.new(params[:poll])
     if @poll.save
-      # redirect_to 
+      redirect_to community_page_path(@poll_set.community, @poll_set.page) 
     else  
       render :action => "new"
     end

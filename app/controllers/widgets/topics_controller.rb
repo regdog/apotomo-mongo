@@ -9,7 +9,8 @@ class Widgets::TopicsController < ApplicationController
   	@topic = Topic.new(params[:topic])
   	if @topic.save 
   	  flash[:notice] = "Topic saved successfully."
-  	  render :action => :show
+  	  # render :action => :show
+      redirect_to community_page_path(@forum.community, @forum.page)
   	else
   	  flash[:notice] = "Failed to save topic."	  
   	  render :action => :new
