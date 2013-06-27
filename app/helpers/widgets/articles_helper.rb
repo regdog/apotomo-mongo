@@ -1,0 +1,2 @@
+module Widgets::ArticlesHelper
+end

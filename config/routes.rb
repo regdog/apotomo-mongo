@@ -1,5 +1,17 @@
 ApotomoMongo::Application.routes.draw do
 
+  get "articles/new"
+
+  get "articles/create"
+
+  get "articles/show"
+
+  get "articles/update"
+
+  get "articles/destroy"
+
+  get "columns/update"
+
   authenticated :user do
     root :to => 'communities#index'
   end
@@ -21,6 +33,9 @@ ApotomoMongo::Application.routes.draw do
       resources :qas do
         resources :questions
       end  
+      resources :columns do
+        resources :articles
+      end
     end
 
     get 'admin', :on => :member

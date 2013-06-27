@@ -3,10 +3,8 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :read, :all
-    # can :update, :all
     can :update, Community do |community|
-        community.try(:admin).email == user.email
+        community.try(:admin).id == user.id
     end    
     # Define abilities for the passed in user here. For example:
     #

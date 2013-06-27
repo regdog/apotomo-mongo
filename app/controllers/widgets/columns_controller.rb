@@ -1,5 +1,4 @@
-class Widgets::ForumsController < ApplicationController
-
+class Widgets::ColumnsController < ApplicationController
   def update
   	@widget = Widget.find params[:id]
 
@@ -7,5 +6,5 @@ class Widgets::ForumsController < ApplicationController
   	  flash[:notice] = "Community has been updated."	
   	  redirect_to community_page_path(@widget.community, @widget.page)
   	end	
-  end	
+  end
 end

@@ -20,3 +20,7 @@
       %h4 问答
       %p 问和答都在这里
       = link_to '添加', url_for_event(:new_widget, :category => "Qa", :id => @page.id), :remote => true  
+    .widget
+      %h4 专栏
+      %p 发表专栏内容的地方
+      = link_to '添加', url_for_event(:new_widget, :category => "Column", :id => @page.id), :remote => true   

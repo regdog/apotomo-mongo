@@ -6,7 +6,7 @@ class Widget
 
   field :name, type: String
   field :type, type: Integer
-  field :position, type: Integer
+  field :position, type: Integer, default: 0
 
   belongs_to :page
   belongs_to :community
